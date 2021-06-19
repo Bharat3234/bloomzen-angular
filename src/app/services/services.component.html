@@ -1,1 +1,38 @@
-<h2>Hello from services component</h2>
+<div class="services">
+  <h2>Hello from services component</h2>
+
+  {{variableOfServices}}
+
+  <button (click)="passDataToParent()">click me</button>
+</div>
+
+<!-- 
+
+  Component interaction
+
+  sharing data between child & parent component
+
+  1. Parent to Child
+  parent will send some data => parent will have that data as variable
+  child will accept that data => child will accept that data as variable
+  @Input() // input directive
+
+  created one var. in parent
+  created one @Input() var. in child
+  to create interaction - [] // at selector of child component inside parent component
+  left - child var inside []
+  right - parent var
+
+
+  2. Child to Parent
+  parent will have one function to accept data
+  child will have one @Output() variable as new EventEmitter() and one function which will emit
+  @Output() // output directive
+
+  created one function inside parent
+  created one variable & function inside child
+  to create interaction - () // at selector of child component inside parent component
+  left - child var inside ()
+  right - parent function
+
+ -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-services',
@@ -7,4 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ServicesComponent {
+
+  variableOfServices = 9;
+
+  @Output() clickEvent = new EventEmitter();
+
+  constructor() {}
+
+  passDataToParent () {
+    this.clickEvent.emit(this.variableOfServices);
+    // alert('Alert from child');
+  }
+
 }

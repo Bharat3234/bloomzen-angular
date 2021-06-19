@@ -21,6 +21,10 @@ export class AppComponent {
   arrayOne = ['dfghj', 'dfgh', 'dfgh', 'fgh'];
   newVariable = 'qwertyu wertyuidfgh';
 
+  parentVariableOne = '************ sndnns ***********';
+
+  variableFromChild = '';
+
   constructor() {}
 
   myFunction() {
@@ -29,6 +33,15 @@ export class AppComponent {
 
   mysecondFunction() {
     prompt('How are you ?');
+  }
+
+  dataFromChild(xyz: any) {
+    this.variableFromChild = xyz;
+    alert(xyz);
+  }
+
+  getFullName() {
+    return 5+6
   }
 
 }

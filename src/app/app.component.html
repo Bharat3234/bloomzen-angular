@@ -1,47 +1,58 @@
-<h1>APP component START</h1>
-<h2>Welcome to Angular</h2>
+<div class="app">
+  <h1>APP component START</h1>
+  <h2>Welcome to Angular</h2>
 
-<!-- interpolation -->
-<h4>{{title}}</h4>
+  {{parentVariableOne}}
 
-<p>{{numberOne}}</p>
+  <h6>{{getFullName()}}</h6>
 
-<h1>{{objectOne.name}}</h1>
-<h1>{{objectOne.message}}</h1>
+  <!-- interpolation -->
+  <h4>{{title}}</h4>
 
-<h5>{{newVariable}}</h5>
+  <p>{{numberOne}}</p>
 
-<!-- <button onclick="myFunction()">Click Me</button> -->
-<!-- onclick
+  <h1>{{objectOne.name}}</h1>
+  <h1>{{objectOne.message}}</h1>
+
+  <h5>{{newVariable}}</h5>
+
+  <!-- <button onclick="myFunction()">Click Me</button> -->
+  <!-- onclick
 onkeyup
 onkeydown
 onkeypress -->
-<button (click)="myFunction()">Click Me</button>
 
-<!-- <input type="text" onkeyup="mysecondFunction()"> -->
-<input type="text" (keyup)="mysecondFunction()">
+<h3>
+  {{variableFromChild}}
+</h3>
+  <button (click)="myFunction()">Click Me</button>
 
-<!-- <h1>services component START</h1> -->
-<!-- <app-services></app-services> -->
-<!-- <h1>services component END</h1> -->
+  <!-- <input type="text" onkeyup="mysecondFunction()"> -->
+  <input type="text" (keyup)="mysecondFunction()">
 
-<!-- <app-about-us></app-about-us> -->
+  <!-- <h1>services component START</h1> -->
+  
+  <app-services (clickEvent)="dataFromChild($event)"></app-services>
+  <!-- <h1>services component END</h1> -->
+
+  <app-about-us [dataFromParent]="parentVariableOne"></app-about-us>
 
 
-<!-- typescript => extended version of Javascipt -->
+  <!-- typescript => extended version of Javascipt -->
 
-<!-- browsers understand js
+  <!-- browsers understand js
 angular run on ts
 
 angular-compiler will convert all .ts files to .js files
 which will tell browser to run js files as browser doesn't know the .ts -->
 
 
-<!-- stylesheet format
+  <!-- stylesheet format
 .css
 .scss
 .sass
 .less -->
 
 
-<h1>APP component END</h1>
+  <h1>APP component END</h1>
+</div>
