@@ -1,0 +1,53 @@
+<div class="contact">
+  <h3>This is contact</h3>
+
+  <h4>{{newText}}</h4>
+
+  <h3>{{getSum(15, 2)}}</h3>
+
+  <h3>{{15-2}}</h3>
+
+  <img src="https://picsum.photos/200/200">
+  <br>
+
+  <img src="{{imageURL}}">
+  <br>
+
+  <img [src]="imageURL">
+
+  <div [id]="13+71">
+    <h3>THis is DIV</h3>
+  </div>
+
+  <div class="dummy-class">
+    <h3>This is also a DIV</h3>
+  </div>
+
+  <div [ngClass]="cssClassValue">
+    <h3>This is one more div</h3>
+  </div>
+  <div [ngClass]="cssClassValue">
+    <h3>This is one more div</h3>
+  </div>
+  <div [ngClass]="cssClassValue">
+    <h3>This is one more div</h3>
+  </div>
+  <div [ngClass]="cssClassValue">
+    <h3 style="color: red;">This is one more div</h3>
+  </div>
+  <div [ngClass]="cssClassValue">
+    <h3 [style]="customStyle">This is one more div</h3>
+  </div>
+  <div [ngClass]="cssClassValue">
+    <h3 [style.color]="colorName">This is one more div</h3>
+  </div>
+
+  <button [disabled]="isButtonDisabled">Click First</button>
+  <br>
+
+  <button (click)="buttonClicked()">Click Me</button>
+
+
+  <h2 [ngClass]="result == 'PASS' ? 'text-green' : 'text-red'">User ABC</h2>
+
+</div>
