@@ -6,15 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule } from '@angular/forms';
+import { SquarePipe } from './square.pipe';
+import { CubePipe } from './cube.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServicesComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CubePipe,
+    SquarePipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

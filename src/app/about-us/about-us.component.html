@@ -1,7 +1,46 @@
 <div class="about">
   <h1>This is about us</h1>
-  <p>qwertyu sdfghjk sdfg</p>
+  <h2>{{userName | uppercase}}</h2>
+  <h2>{{userName | lowercase}}</h2>
+
+  <h3>{{0.05 | percent}}</h3>
+  <!-- obtainedMarks / outOfValue * 100 -->
+
+  <h3>{{ 500 | currency}}</h3>
+  <h3>{{ 500 | currency:'INR'}}</h3>
+
+  <h3>{{ 4.6 | number:'1.0-0' }}</h3>  
+
+  <h3>{{todayDate | date: 'short'}}</h3>
+  <!-- M/d/yy, h:mm a -->
+  
+  <h3>{{todayDate | date: 'medium'}}</h3>
+  <!-- MMM d, y, h:mm:ss a -->
+  
+  <h3>{{todayDate | date: 'long'}}</h3>
+  <!-- MMMM d, y, h:mm:ss a z -->
+
+  <h4>Custom Pipes</h4>
+  <h3>SQUARE PIPE - {{ 12 | square }}</h3>
+
+  <h3>CUBE PIPE - {{ 3 | cube }}</h3>
+
+  <button (click)="changeUserName()">Change user name</button>
+  <button (click)="userName = 'Dummy Text'">Change user name</button>
 
   <h2>{{dataFromParent}}</h2>
+
+  <button (click)="onClick()">Click Me</button>
+
+  <br>
+
+  <input #email type="text">
+
+  <button (click)="submit(email.value)">Submit</button>
+
+  <br>
+
+  <input type="text" [(ngModel)]="inputValue" (keyup)="onKeyUp()">
+  <!-- ngModel is two-binding -->
 
 </div>
