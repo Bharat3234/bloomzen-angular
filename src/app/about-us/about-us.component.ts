@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ManagerService } from '../manager.service';
 
 @Component({
     selector: 'app-about-us',
@@ -16,7 +17,9 @@ export class AboutUsComponent {
 
     todayDate = new Date();
 
-    constructor() { }
+    constructor(
+        public managerService: ManagerService
+    ) { }
 
     onClick() {
         console.log('Hello');

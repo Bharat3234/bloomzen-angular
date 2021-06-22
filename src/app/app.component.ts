@@ -25,6 +25,22 @@ export class AppComponent {
 
   variableFromChild = '';
 
+  isNewUser = false;
+
+  stringVariable = 'FAIL';
+
+  users = ['User1', 'User2', 'User3', 'User4', 'User5'];
+
+  students = [
+    { id: 1, firstName: 'qwert', lastName: 'dfgh', result: 'PASS' },
+    { id: 2, firstName: 'edfghjm', lastName: 'asdasd', result: 'PASS' },
+    { id: 3, firstName: 'sdfvgbnm', lastName: 'asdsad', result: 'FAIL' },
+    { id: 4, firstName: 'ghkjh', lastName: 'sadsd', result: 'FAIL' },
+    { id: 5, firstName: 'dfghjk', lastName: 'ddsadasfgh', result: 'PASS' },
+  ];
+
+  todayDay = new Date().getDay();
+
   constructor() {}
 
   myFunction() {
@@ -43,5 +59,18 @@ export class AppComponent {
   getFullName() {
     return 5+6
   }
+
+  /*
+  Directives
+  1. Attribute Directives
+  ngClass
+  ngStyle
+  ngModel
+
+  2. Structural Directives
+  NgIf => *ngIf - to show or hide html elements conditionally
+  NgFor => *ngFor - to repeat html element (to loop on data - specifically on Array)
+  NgSwitch => *ngSwitch - to switch between multiple values
+  */
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ManagerService } from '../manager.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -16,12 +17,13 @@ export class ContactUsComponent implements OnInit {
   customStyle = 'color: green';
 
   colorName = 'rgb(255, 255, 255)';
-
-
   result = 'PASS';
 
 
-  constructor() { }
+  constructor(
+    // dependency injection
+    public managerService: ManagerService
+  ) { }
 
   ngOnInit(): void {
   }

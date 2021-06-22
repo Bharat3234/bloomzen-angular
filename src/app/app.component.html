@@ -1,6 +1,34 @@
 <div class="app">
   <h1>APP component START</h1>
-  <h2>Welcome to Angular</h2>
+
+  <h2 *ngIf="isNewUser">Welcome to Angular</h2>
+
+  <h3 *ngIf="stringVariable == 'PASS'">qwerty</h3>
+
+  <div *ngFor="let xyz of users">{{xyz}}</div>
+  <ul>
+    <li *ngFor="let stud of students">
+      <div>
+        <a>{{stud.firstName}} {{stud.lastName}}</a>
+      </div>
+      <a *ngIf="stud.result == 'PASS'" [ngStyle]="stud.result == 'PASS' ? {color: 'green'} : {}">Student passed</a>
+      <a *ngIf="stud.result == 'FAIL'" [ngStyle]="stud.result == 'FAIL' ? {color: 'red'} : {}">Student Failed</a>
+    </li>
+  </ul>
+
+  <h1 [ngClass]="isNewUser == true ? 'new-user' : 'old-user'">wsdfghj</h1>
+
+  <div [ngSwitch]="todayDay">
+    <h2 *ngSwitchCase=0>Today is Sunday</h2>
+    <h2 *ngSwitchCase=1>Today is Monday</h2>
+    <h2 *ngSwitchCase=2>Today is Tuesday</h2>
+    <h2 *ngSwitchCase=3>Today is Wednesday</h2>
+    <h2 *ngSwitchCase=4>Today is Thursday</h2>
+    <h2 *ngSwitchCase=5>Today is Friday</h2>
+    <h2 *ngSwitchCase=6>Today is Saturday</h2>
+  </div>
+
+  <h1 appTextcolor>From directive</h1>
 
   <app-contact-us></app-contact-us>
 

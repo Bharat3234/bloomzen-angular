@@ -9,6 +9,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { SquarePipe } from './square.pipe';
 import { CubePipe } from './cube.pipe';
+import { TextcolorDirective } from './textcolor.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CubePipe } from './cube.pipe';
     AboutUsComponent,
     ContactUsComponent,
     CubePipe,
-    SquarePipe
+    SquarePipe,
+    TextcolorDirective
   ],
   imports: [
     FormsModule,
