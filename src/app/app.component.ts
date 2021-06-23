@@ -25,7 +25,8 @@ export class AppComponent {
 
   variableFromChild = '';
 
-  isNewUser = false;
+  isNewUser = true;
+  isUserVerified = false;
 
   stringVariable = 'FAIL';
 
@@ -70,7 +71,7 @@ export class AppComponent {
   2. Structural Directives
   NgIf => *ngIf - to show or hide html elements conditionally
   NgFor => *ngFor - to repeat html element (to loop on data - specifically on Array)
-  NgSwitch => *ngSwitch - to switch between multiple values
+  NgSwitch => [ngSwitch] - to switch between multiple values
   */
 
 }

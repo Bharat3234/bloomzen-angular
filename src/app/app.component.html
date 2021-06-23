@@ -1,7 +1,12 @@
 <div class="app">
   <h1>APP component START</h1>
 
-  <h2 *ngIf="isNewUser">Welcome to Angular</h2>
+  <div *ngIf="isNewUser">
+    <h1>Hello</h1>
+    <h2 *ngIf="isUserVerified">Welcome to Angular</h2>
+    <h1 appTextcolor>Directive</h1>
+  </div>
+
 
   <h3 *ngIf="stringVariable == 'PASS'">qwerty</h3>
 

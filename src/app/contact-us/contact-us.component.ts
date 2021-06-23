@@ -19,6 +19,8 @@ export class ContactUsComponent implements OnInit {
   colorName = 'rgb(255, 255, 255)';
   result = 'PASS';
 
+  resultFromService = 0;
+
 
   constructor(
     // dependency injection
@@ -26,6 +28,8 @@ export class ContactUsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('managerService', this.managerService);
+    this.managerService.functionFromService();
   }
 
   getSum(num1: number, num2: number) {
@@ -34,6 +38,10 @@ export class ContactUsComponent implements OnInit {
 
   buttonClicked() {
     alert('Hello');
+  }
+
+  addTwo(num1: number, num2: number) {
+    this.resultFromService = this.managerService.performSum(num1, num2);
   }
 
 }
