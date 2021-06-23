@@ -35,7 +35,7 @@
 
   <h1 appTextcolor>From directive</h1>
 
-  <app-contact-us></app-contact-us>
+  <!-- <app-contact-us></app-contact-us> -->
 
   {{parentVariableOne}}
 
@@ -67,10 +67,10 @@ onkeypress -->
 
   <!-- <h1>services component START</h1> -->
   
-  <app-services (clickEvent)="dataFromChild($event)"></app-services>
+  <!-- <app-services (clickEvent)="dataFromChild($event)"></app-services> -->
   <!-- <h1>services component END</h1> -->
 
-  <app-about-us [dataFromParent]="parentVariableOne"></app-about-us>
+  <!-- <app-about-us [dataFromParent]="parentVariableOne"></app-about-us> -->
 
 
   <!-- typescript => extended version of Javascipt -->
@@ -90,4 +90,16 @@ which will tell browser to run js files as browser doesn't know the .ts -->
 
 
   <h1>APP component END</h1>
+
+  <ul>
+    <li>
+      <a routerLink="/contact">Contact</a>
+    </li>
+    <li>
+      <a routerLink="/about">About</a>
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+
 </div>
