@@ -1,6 +1,8 @@
 <div class="about">
   <h1>This is about us</h1>
 
+  <h2>{{dataFromParent}}</h2>
+
   <button (click)="managerService.performSum(34, 64)">Sum</button>
   <h1>{{managerService.projectTitle}}</h1>
 
@@ -32,7 +34,6 @@
   <button (click)="changeUserName()">Change user name</button>
   <button (click)="userName = 'Dummy Text'">Change user name</button>
 
-  <h2>{{dataFromParent}}</h2>
 
   <button (click)="onClick()">Click Me</button>
 

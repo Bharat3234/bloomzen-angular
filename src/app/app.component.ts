@@ -21,7 +21,7 @@ export class AppComponent {
   arrayOne = ['dfghj', 'dfgh', 'dfgh', 'fgh'];
   newVariable = 'qwertyu wertyuidfgh';
 
-  parentVariableOne = '************ sndnns ***********';
+  parentVariableOne = 'FAIL';
 
   variableFromChild = '';
 

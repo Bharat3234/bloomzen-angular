@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ManagerService } from '../manager.service';
 
 @Component({
@@ -7,9 +7,9 @@ import { ManagerService } from '../manager.service';
     styleUrls: ['./about-us.component.scss']
 })
 
-export class AboutUsComponent {
+export class AboutUsComponent implements OnInit, OnChanges {
 
-    @Input() dataFromParent = '';
+    @Input() dataFromParent = 'QWERTY';
 
     userName = 'Bloomzen';
 
@@ -20,6 +20,18 @@ export class AboutUsComponent {
     constructor(
         public managerService: ManagerService
     ) { }
+
+    ngOnInit(): void {
+        console.log('ngOnInit of About us component');
+    }
+
+    ngOnChanges(changes: SimpleChanges): void {
+        console.log('ngOnChanges of About us component');
+        console.log('changes :', changes);
+        if (changes.dataFromParent.currentValue == 'PASS') {
+            console.log('PASSED');
+        }
+    }
 
     onClick() {
         console.log('Hello');

@@ -70,7 +70,9 @@ onkeypress -->
   <!-- <app-services (clickEvent)="dataFromChild($event)"></app-services> -->
   <!-- <h1>services component END</h1> -->
 
-  <!-- <app-about-us [dataFromParent]="parentVariableOne"></app-about-us> -->
+  <button (click)="parentVariableOne = 'PASS'">Change</button>
+
+  <app-about-us [dataFromParent]="parentVariableOne"></app-about-us>
 
 
   <!-- typescript => extended version of Javascipt -->
