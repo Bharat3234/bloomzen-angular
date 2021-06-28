@@ -14,7 +14,7 @@
   <ul>
     <li *ngFor="let stud of students">
       <div>
-        <a>{{stud.firstName}} {{stud.lastName}}</a>
+        <a [ngStyle]="{fontSize: '25px'}">{{stud.firstName}} {{stud.lastName}}</a>
       </div>
       <a *ngIf="stud.result == 'PASS'" [ngStyle]="stud.result == 'PASS' ? {color: 'green'} : {}">Student passed</a>
       <a *ngIf="stud.result == 'FAIL'" [ngStyle]="stud.result == 'FAIL' ? {color: 'red'} : {}">Student Failed</a>
